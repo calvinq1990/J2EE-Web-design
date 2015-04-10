@@ -1,0 +1,78 @@
+
+<!--   Name: Jiaqi Luo
+  ID: jiaqiluo
+  course: 08-600
+  Date: Nov 1st, 2014
+
+  Description:
+      In this project, 4 functions of calculation has bee provided. -->
+
+<!doctype html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <title>Calculator</title>
+
+    <script type="text/javascript">
+      
+    function add() {
+      var x = parseInt(document.getElementById("x").value);
+      var y = parseInt(document.getElementById("y").value);
+      document.getElementById("output").innerHTML = x + y ;              
+    }
+    function mutiply() {
+      var x = parseInt(document.getElementById("x").value);
+      var y = parseInt(document.getElementById("y").value);
+      document.getElementById("output").innerHTML = x * y ;
+    }
+    function minus() {
+      var x = parseInt(document.getElementById("x").value);
+      var y = parseInt(document.getElementById("y").value);
+      document.getElementById("output").innerHTML = x - y ;
+    }
+    function divide(p1, p2){
+      var x = parseInt(document.getElementById("x").value);
+      var y = parseInt(document.getElementById("y").value);
+      document.getElementById("output").innerHTML = x / y ;
+    }
+    </script>
+
+    <style>
+      body {
+        background-color: #d0e4fe;
+      }
+      h2 {
+        color: grey;
+      }
+    </style>
+
+  </head>
+
+
+
+  <body id="body">
+
+   <h2>Calculator</h2>
+
+      <table>
+        <tr>
+          <td >x:</td>
+          <td colspan="3"><input type="text" size="40" id="x" ></td>
+        </tr>
+        <tr>
+          <td >y:</td>
+          <td colspan="3"><input type="text" size="40" id="y" ></td>
+        </tr>
+        <tr>
+          <td><input id="add" type="button" value="+" onClick= "add()" ></td>
+          <td><input id="minus" type="button" value="-" onClick= "minus()" ></td>
+          <td><input id="mutiply" type="button" value="*" onClick= "mutiply()" ></td>
+          <td><input id="divide" type="button" value="/" onClick= "divide()" ></td>
+        </tr>
+        <tr>
+          <td style="font-size:110%"> Answer: </td>
+          <td style="font-size:110%" colspan="3" id="output"></td>
+        </tr>
+      </table>
+  </body>
+</html>
